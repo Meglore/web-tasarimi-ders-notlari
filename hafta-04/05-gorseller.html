@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafta 04 - Görsel Etiketi</title>
+  </head>
+  <body>
+    <nav>
+      <a href="04-baglantilar.html">← Önceki: Bağlantılar</a> |
+      <a href="README.md">Ana Menü</a> |
+      <a href="06-listeler.html">Sonraki: Listeler →</a>
+    </nav>
+    <hr />
+
+    <h1>Görsel Kullanımı (<code>&lt;img&gt;</code>)</h1>
+    <p>
+      <code>&lt;img&gt;</code> etiketi tekil (kapanış etiketi olmayan) bir
+      etikettir.
+    </p>
+
+    <h2>1. Başarılı Görsel Çağrısı (Boyutlandırma ile)</h2>
+    <!-- src: dosya yolu, alt: alternatif metin, width/height: piksel cinsinden boyut -->
+    <img
+      src="resimler/araba.jpg"
+      alt="Kırmızı Spor Araba Görseli"
+      width="300"
+      height="300"
+    />
+
+    <h2>2. Hatalı Yol ve `alt` Özelliğinin Önemi</h2>
+    <p>
+      Eğer dosya yolu yanlışsa veya resim sunucuda yoksa <code>alt</code> metni
+      ekranda gösterilir:
+    </p>
+    <img
+      src="resimler/olmayan-araba.jpg"
+      alt="Güzel bir araba resmi (Görsel Yüklenemedi)"
+      width="200"
+      height="200"
+    />
+
+    <p>
+      <small
+        >* Not: <code>alt</code> niteliği hem arama motoru optimizasyonu (SEO)
+        hem de görme engelliler için ekran okuyucular adına zorunludur.</small
+      >
+    </p>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafta 04 - Bağlantılar ve Dizin Yönetimi</title>
+  </head>
+  <body>
+    <nav>
+      <a href="03-metin-bicimlendirme.html">← Önceki: Metin Biçimlendirme</a> |
+      <a href="README.md">Ana Menü</a> |
+      <a href="05-gorseller.html">Sonraki: Görseller →</a>
+    </nav>
+    <hr />
+
+    <h1>Bağlantı (Anchor) ve Dizin Yönetimi</h1>
+
+    <h2>1. Harici Bağlantılar ve Sekme Yönetimi</h2>
+    <p>
+      <!-- Varsayılan hedef: Mevcut sayfayı değiştirir (_self) -->
+      <a href="https://www.google.com" target="_self"
+        >Google'a Git (Aynı Sekmede Aç - _self)</a
+      >
+    </p>
+    <p>
+      <!-- Yeni sekmede açar (_blank) -->
+      <a href="https://www.google.com" target="_blank"
+        >Arama Yapmak İçin Tıklayınız (Yeni Sekmede Aç - _blank)</a
+      >
+    </p>
+
+    <h2>2. Dahili Dosya Yolları (Relative Paths)</h2>
+    <ul>
+      <!-- Aynı dizindeki dosyaya bağlantı -->
+      <li>
+        <a href="02-temel-iskelet.html"
+          >Aynı Dizindeki Dosya (02-temel-iskelet.html)</a
+        >
+      </li>
+
+      <!-- Alt klasöre iniş -->
+      <li>
+        <a href="sayfalar/alt-sayfa.html"
+          >Alt Klasöre Git (sayfalar/alt-sayfa.html)</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

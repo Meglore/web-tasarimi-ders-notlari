@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    XML (eXtensible Markup Language) Örneği:
+    Veriyi hiyerarşik ve anlamlı bir ağaç yapısında tutar.
+    Veritabanındaki bir tablonun satır ve sütunlarının etiketlerle modellenmesidir.
+-->
+<OgrenciListesi>
+    <!-- 1. Kayıt / Satır Paketi -->
+    <OgrenciDetay>
+        <Ad>Mustafa Kemal</Ad>
+        <Soyad>Yazlık</Soyad>
+        <Program>Yönetim Bilişim Sistemleri</Program>
+    </OgrenciDetay>
+
+    <!-- 2. Kayıt / Satır Paketi -->
+    <OgrenciDetay>
+        <Ad>Samet</Ad>
+        <Soyad>Acar</Soyad>
+        <Program>Yönetim Bilişim Sistemleri</Program>
+    </OgrenciDetay>
+</OgrenciListesi>

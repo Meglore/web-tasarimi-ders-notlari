@@ -14,11 +14,12 @@ Bu depo; **Yönetim Bilişim Sistemleri (YBS)** lisans müfredatı kapsamında y
 
 ## 🧭 Haftalık İlerleme Matrisi
 
-| Hafta  | Modül / Konu Başlığı           | Odak Alanları                                                   |     Dokümantasyon     |
-| :----: | :----------------------------- | :-------------------------------------------------------------- | :-------------------: |
-| **01** | `Akademik Giriş & Planlama`    | Öğretim elemanı mazereti sebebiyle ders işlenmedi               | [İncele](./hafta-01/) |
-| **02** | `Metodoloji, Hibrit Yapı & AI` | Hibrit eğitim modeli, YBS odaklı yapay zeka destekli geliştirme | [İncele](./hafta-02/) |
-| **03** | `Ağ Mimarisi & HTTP Protokolü` | DNS-TCP-TLS yaşam döngüsü, durum kodları (Status Codes)         | [İncele](./hafta-03/) |
+| Hafta  | Modül / Konu Başlığı                        | Odak Alanları                                                                          |     Dokümantasyon     |
+| :----: | :------------------------------------------ | :------------------------------------------------------------------------------------- | :-------------------: |
+| **01** | `Akademik Giriş & Planlama`                 | Öğretim elemanı mazereti sebebiyle ders işlenmedi                                      | [İncele](./hafta-01/) |
+| **02** | `Metodoloji, Hibrit Yapı & AI`              | Hibrit eğitim modeli, YBS odaklı yapay zeka destekli geliştirme                        | [İncele](./hafta-02/) |
+| **03** | `Ağ Mimarisi & HTTP Protokolü`              | DNS-TCP-TLS yaşam döngüsü, durum kodları (Status Codes)                                | [İncele](./hafta-03/) |
+| **04** | `HTML Temelleri, Etiket Mantığı & DevTools` | XML veri mimarisi, HTML5 iskeleti, DevTools analizi, tipografi, bağlantılar & listeler | [İncele](./hafta-04/) |
 
 ---
 
