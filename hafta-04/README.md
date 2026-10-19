@@ -1,44 +1,97 @@
-# Hafta 04: HTML Temelleri, Etiket Mantığı ve Doküman Yapısı
+# 📦 Hafta 04: HTML Temelleri, Etiket Mantığı ve Doküman Yapısı
 
-Bu hafta işaretleme dillerinin (XML/HTML) temel çalışma mantığı, tarayıcı geliştirici araçları (DevTools), standart HTML5 iskeleti ve temel içerik etiketleri işlenmiştir.
+![Modül](https://img.shields.io/badge/Modül-Web_Biçimlendirme-E34F26?style=flat-square&logo=html5&logoColor=white)
+![Protokol](https://img.shields.io/badge/İnceleme-DevTools_Network-232F3E?style=flat-square)
+![Standart](https://img.shields.io/badge/Standart-HTML5_Semantic-blue?style=flat-square)
+
+Bu modülde işaretleme dillerinin (XML/HTML) temel çalışma prensibi, tarayıcı geliştirici araçları üzerinden istemci-sunucu trafiğinin izlenmesi, standart HTML5 iskeleti ve temel sayfa içi içerik etiketleri ele alınmıştır.
+
+> [!NOTE]
+> Web sayfaları tarayıcı tarafından doğrudan derlenmez; DOM (Document Object Model) ağacına göre yukarıdan aşağıya doğru parse edilir. Etiketlerin doğru kapatılması ve hiyerarşik paketleme, arayüzün kararlı render edilmesi için kritiktir.
 
 ---
 
 ## 📑 Ders Konu Başlıkları
 
-1. **İşaretleme Dilleri ve XML Mantığı:**
-   - Etiketlerin (tag) hiyerarşik ve ağaç yapısı.
-   - Verilerin karışmaması için blok/paket oluşturma mantığı (`<OgrenciDetay>`).
-2. **HTML Sayfa İskeleti ve Tarayıcı Yorumlaması:**
-   - `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` bölümleri.
-   - Karakter kodlaması (`UTF-8`) ve viewport tanımları.
-   - Düz metin dosyasının `.html` uzantısına çevrilerek çalıştırılması.
-3. **Tarayıcı Geliştirici Araçları (DevTools - F12):**
-   - **Elements:** DOM ağacı ve etiketlerin kapladığı alanlar (genişlik/yükseklik).
-   - **Console:** JavaScript ve referans hataları, satır numarası takibi.
-   - **Sources:** Yüklenen HTML, harici CSS ve JS dosyaları.
-   - **Network:** HTTP istek/yanıt döngüsü (`GET`, `POST`), durum kodları (`200 OK`, `302 Moved`, `401 Unauthorized`, `403 Forbidden`).
-4. **Metin ve Tipografi Etiketleri:**
-   - Başlık hiyerarşisi (`<h1>` - `<h6>`), satırı blok olarak kaplama davranışı.
-   - Paragraf (`<p>`), tekil satır atlama (`<br />`).
-   - Biçimlendirme: `<b>` vs `<strong>`, `<i>` vs `<em>`, `<u>`, `<mark>`.
-5. **Köprüler ve Dizin Yönetimi:**
-   - `<a>` etiketi, `href` ve `target` (`_blank`, `_self`) nitelikleri.
-   - Bağıl yollar (Relative Paths): Aynı dizin, alt klasöre iniş (`klasor/dosya.html`), üst klasöre çıkış (`../dosya.html`).
-6. **Medya ve Listeler:**
-   - Görsel yerleşimi (`<img>`), `src`, `alt`, `width`, `height`.
-   - Sırasız liste (`<ul>`), sıralı liste (`<ol>`) ve liste elemanları (`<li>`).
+### 1. İşaretleme Dilleri ve XML Mantığı
+
+- **Hiyerarşik Ağaç Yapısı:** Verilerin alt etiketler (`tag`) aracılığıyla anlamlandırılması.
+- **Veri Paketleme:** Çoklu veri modellerinde (Örn: Öğrenci tablosu) alanların birbirine karışmaması için kapsayıcı (`<OgrenciDetay>`) etiket kullanımı.
 
 ---
 
-## 📂 Dosya Dizini ve Bağlantılar
+### 2. HTML Sayfa İskeleti ve Yorumlama
 
-| Dosya                                                          | Açıklama                                                                 |
-| :------------------------------------------------------------- | :----------------------------------------------------------------------- |
-| [`01-xml-yapisi.xml`](./01-xml-yapisi.xml)                     | XML veri formatı, etiket eşleme ve veri paketleme örneği.                |
-| [`02-temel-iskelet.html`](./02-temel-iskelet.html)             | Standart HTML5 sayfa yapısı ve meta ayarları.                            |
-| [`03-metin-bicimlendirme.html`](./03-metin-bicimlendirme.html) | Başlıklar, paragraflar ve metin vurgulama etiketleri.                    |
-| [`04-baglantilar.html`](./04-baglantilar.html)                 | İç/dış bağlantılar, sekme yönetimi ve klasör hiyerarşisi.                |
-| [`05-gorseller.html`](./05-gorseller.html)                     | Resim ekleme, boyutlandırma ve alt etiketinin SEO/erişilebilirlik önemi. |
-| [`06-listeler.html`](./06-listeler.html)                       | Sıralı/sırasız listeler ve web menü altyapısı.                           |
-| [`sayfalar/alt-sayfa.html`](./sayfalar/alt-sayfa.html)         | Üst dizine çıkış (`../`) test sayfası.                                   |
+- **Doküman Tanımı:** `<!DOCTYPE html>` ile HTML5 standartlarına geçiş.
+- **Bölümleme Mantığı:**
+  - `<head>`: Sayfa başlığı (`<title>`), mobil uyumluluk (`viewport`) ve karakter seti (`UTF-8`).
+  - `<body>`: Kullanıcıya yansıtılan tüm görsel ve metinsel arayüz bileşenleri.
+- **Dosya Dönüşümü:** Düz metin (`.txt`) uzantısının `.html` yapılarak tarayıcı motoruna yorumlatılması.
+
+---
+
+### 3. Tarayıcı Geliştirici Araçları (DevTools — `F12`)
+
+| Sekme        | İnceleme Alanı & Odak                                                                               |
+| :----------- | :-------------------------------------------------------------------------------------------------- |
+| **Elements** | Canlı DOM ağacı, etiket kutu modeli (genişlik/yükseklik piksel tahsisleri).                         |
+| **Console**  | JavaScript çalışma zamanı hataları, referans uyarıları ve satır takibi.                             |
+| **Sources**  | Sunucudan indirilen kaynak dosyaların (HTML, harici CSS/JS) ham hali.                               |
+| **Network**  | `GET`/`POST` istekleri, kaynak yükleme süreleri ve HTTP durum kodları (`200`, `302`, `401`, `403`). |
+
+---
+
+### 4. Metin ve Tipografi Mimarisi
+
+- **Başlıklar (`<h1>` – `<h6>`):** Sayfa hiyerarşisini belirler, varsayılan olarak satırı blok kaplar.
+- **Paragraflar & Satır Atlama:** Metin blokları için `<p>`, satır içi atlama için tekil `<br />` etiketi.
+- **Görsel vs Semantik Vurgulama:**
+  - `<b>` _(yalnızca kalın)_ ⟷ `<strong>` _(anlamsal önem ve vurgu)_
+  - `<i>` _(yalnızca italik)_ ⟷ `<em>` _(vurgulanmış eğik ifade)_
+  - `<u>` _(altı çizili)_ ve `<mark>` _(fosforlu arkaplan vurgusu)_
+
+---
+
+### 5. Köprüler (Links) ve Bağıl Yol Yönetimi
+
+- **Hedef Yönetimi (`target`):**
+  - `_self`: Mevcut sekmede gezinme (varsayılan).
+  - `_blank`: Dış bağlantıları izole yeni sekmede açma.
+- **Dizin Hiyerarşisi (Relative Paths):**
+  - Aynı dizin: `dosya.html`
+  - Alt klasöre iniş: `klasor/dosya.html`
+  - Üst klasöre çıkış: `../dosya.html`
+
+---
+
+### 6. Medya ve Listeleme Yapıları
+
+- **Görseller (`<img>`):** `src`, boyut sınırlamaları (`width`/`height`) ve SEO/erişilebilirlik için zorunlu `alt` alternatifi.
+- **Sırasız Listeler (`<ul>`):** Madde imli listeler (Modern navigasyon barlarının temeli).
+- **Sıralı Listeler (`<ol>`):** Sayısal/alfabetik aşamalı adımlar.
+- **Liste Elemanı (`<li>`):** Tüm liste türlerinin ortak satır taşıyıcısı.
+
+---
+
+## 📂 Dosya Dizini ve Uygulamalar
+
+Aşağıdaki tabloda bu hafta yazılan ve birbiriyle bağıl yollarla (`relative path`) ilişkili olan çalışma dosyaları yer almaktadır:
+
+|  Tip   | Dosya Adı                                                      | Açıklama                                                      |
+| :----: | :------------------------------------------------------------- | :------------------------------------------------------------ |
+| `XML`  | [`01-xml-yapisi.xml`](./01-xml-yapisi.xml)                     | Hiyerarşik veri etiketleme ve paket blok örneği               |
+| `HTML` | [`02-temel-iskelet.html`](./02-temel-iskelet.html)             | Standart HTML5 iskeleti, meta veriler ve sekme başlığı        |
+| `HTML` | [`03-metin-bicimlendirme.html`](./03-metin-bicimlendirme.html) | Başlık blokları, paragraf yapısı ve metin vurguları           |
+| `HTML` | [`04-baglantilar.html`](./04-baglantilar.html)                 | Dahili/harici linkler, sekme hedefleri ve yol testleri        |
+| `HTML` | [`05-gorseller.html`](./05-gorseller.html)                     | Görsel çağırma, boyutlandırma ve fallback (`alt`) mekanizması |
+| `HTML` | [`06-listeler.html`](./06-listeler.html)                       | `<ul>` ve `<ol>` listeleri, `<li>` veri gruplama              |
+| `TEST` | [`sayfalar/alt-sayfa.html`](./sayfalar/alt-sayfa.html)         | Üst klasöre geri çıkış (`../`) bağıl yol denemesi             |
+
+---
+
+<details>
+<summary>📌 <strong>Gelecek Hafta Öncesi Notlar (Hafta 05)</strong></summary>
+
+- `<center>` ve benzeri eski HTML hizalama etiketleri kullanılmayacaktır; mizanpaj çözümleri **CSS** modülünde ele alınacaktır.
+- Bir sonraki derste `<table>` veri tabloları, `<video>` multimedya etiketleri ve temel CSS seçicilerine giriş yapılacaktır.
+</details>
