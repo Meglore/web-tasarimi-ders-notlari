@@ -1,9 +1,14 @@
-﻿# 🌐 Hafta 01: Ders Tanıtımı ve İşleyiş
+﻿# 🌐 Hafta 01: Akademik Takvim Girişi ve Dönem Planlaması
 
-Bu hafta uygulamalı kod yazımı veya konu anlatımı yapılmamıştır.
+![Modül](https://img.shields.io/badge/Modül-Giriş_%26_Planlama-informational?style=flat-square)
+![Durum](https://img.shields.io/badge/Durum-İşlenmedi-inactive?style=flat-square)
 
-## 📌 Ele Alınan Başlıklar
+> [!IMPORTANT]
+> **Oturum Durumu:** Ders İşlenmedi  
+> İlgili akademik haftada öğretim elemanının mazereti dolayısıyla ders yürütülmemiştir.
 
-* Dersin amacı, kapsamı ve dönemlik müfredat planı
-* Kullanılacak araçlar, editörler ve çalışma ortamı
-* Değerlendirme kriterleri (vize, final, ödev ve proje süreçleri)
+---
+
+## 📌 Oturum Özeti
+
+Dönemin ilk haftasında teorik anlatım veya laboratuvar kodlaması gerçekleştirilmemiştir. Dersin müfredat çerçevesi ve metodolojik kurgusu ikinci hafta oturumuyla birlikte başlatılmıştır.
