@@ -20,6 +20,7 @@ Bu depo; **Yönetim Bilişim Sistemleri (YBS)** lisans müfredatı kapsamında y
 | **02** | `Metodoloji, Hibrit Yapı & AI`              | Hibrit eğitim modeli, YBS odaklı yapay zeka destekli geliştirme                        | [İncele](./hafta-02/) |
 | **03** | `Ağ Mimarisi & HTTP Protokolü`              | DNS-TCP-TLS yaşam döngüsü, durum kodları (Status Codes)                                | [İncele](./hafta-03/) |
 | **04** | `HTML Temelleri, Etiket Mantığı & DevTools` | XML veri mimarisi, HTML5 iskeleti, DevTools analizi, tipografi, bağlantılar & listeler | [İncele](./hafta-04/) |
+| **05** | `Ders İşlenmedi / Mazeret`                  | Öğretim elemanı mazereti / akademik takvim sebebiyle ders işlenmedi                    | [İncele](./hafta-05/) |
 
 ---
 
