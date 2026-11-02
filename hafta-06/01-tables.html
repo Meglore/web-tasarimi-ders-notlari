@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafta 06 - Öğrenci Not Tablosu (Rowspan & Colspan)</title>
+  </head>
+  <body>
+    <nav>
+      <a
+        href="https://github.com/Meglore/web-tasarimi-ders-notlari/blob/main/hafta-06/README.md"
+        >← Hafta 06 README</a
+      >
+      |
+      <a href="02-video.html">Sonraki: Video Ekleme →</a>
+    </nav>
+    <hr />
+
+    <h1 style="text-align: center">YBS Lisans Not Çizelgesi</h1>
+    <p style="text-align: center">
+      <em
+        >Not: Tablo satır/sütun birleştirmeleri <code>rowspan</code> ve
+        <code>colspan</code> nitelikleri ile yapılandırılmıştır.</em
+      >
+    </p>
+
+    <!-- 
+      Tablo Nitelikleri Notu:
+      - border: Tablo hücrelerine 1px kenarlık ekler.
+      - cellpadding: Hücre içeriği ile kenarlık arasındaki iç boşluk.
+      - cellspacing: Hücrelerin birbirine olan dış mesafesi.
+      - align="center": Tabloyu sayfada ortalar (HTML5'te CSS ile çözülür).
+    -->
+    <table
+      border="1"
+      cellpadding="8"
+      cellspacing="0"
+      align="center"
+      style="margin: 0 auto; min-width: 650px"
+    >
+      <!-- Tablo Başlık Grubu (Table Header) -->
+      <thead>
+        <tr style="background-color: #f1f5f9">
+          <th>Ad</th>
+          <th>Soyad</th>
+          <th>Öğrenci No</th>
+          <th>Program</th>
+          <th>Yaş</th>
+          <th>Vize</th>
+          <th>Final</th>
+        </tr>
+      </thead>
+
+      <!-- Tablo Gövdesi (Table Body) -->
+      <tbody>
+        <!-- 1. Satır: Mustafa Kemal (Program sütunu rowspan="3" ile 3 satır dikey birleştirildi) -->
+        <tr>
+          <td>Mustafa Kemal</td>
+          <td>Yazlık</td>
+          <td>240307059</td>
+          <!-- rowspan="3": Bu hücre altındaki 2 satır boyunca Program sütununu kaplar -->
+          <td
+            align="center"
+            rowspan="3"
+            style="background-color: #e0f2fe; font-weight: bold"
+          >
+            YBS
+          </td>
+          <td align="center">20</td>
+          <!-- colspan="2": Vize ve Final sütunları yatayda birleştirildi -->
+          <td
+            align="center"
+            colspan="2"
+            style="background-color: #dcfce7; font-weight: bold"
+          >
+            90
+          </td>
+        </tr>
+
+        <!-- 2. Satır: Samet (Yukarıdan gelen rowspan nedeniyle Program hücresi ATLANMALIDIR) -->
+        <tr>
+          <td>Samet</td>
+          <td>Acar</td>
+          <td>240307013</td>
+          <!-- Program hücresi yazılmaz, aksi halde satır sağa taşar -->
+          <td align="center">23</td>
+          <td align="center">80</td>
+          <td align="center">75</td>
+        </tr>
+
+        <!-- 3. Satır: Emirhan (Yine Program hücresi atlanır) -->
+        <tr>
+          <td>Emirhan</td>
+          <td>Derebaşı</td>
+          <td>240307015</td>
+          <td align="center">21</td>
+          <td align="center">90</td>
+          <td align="center">92</td>
+        </tr>
+
+        <!-- 4. Satır: Berat (Rowspan bittiği için kendi Program hücresini barındırır) -->
+        <tr>
+          <td>Berat</td>
+          <td>Koşararslan</td>
+          <td>240307013</td>
+          <td align="center" style="background-color: #fef3c7">
+            Bilgisayar Müh.
+          </td>
+          <td align="center">22</td>
+          <td align="center">80</td>
+          <td align="center">70</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

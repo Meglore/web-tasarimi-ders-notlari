@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 06 - HTML5 Ses Ekleme</title>
+</head>
+<body style="text-align: center; font-family: sans-serif; margin-top: 30px;">
+    <nav>
+        <a href="02-video.html">← Önceki: Video</a> | 
+        <a href="https://github.com/Meglore/web-tasarimi-ders-notlari/blob/main/hafta-06/README.md">Hafta 06 Menü</a> | 
+        <a href="04-forms.html">Sonraki: Formlar →</a>
+    </nav>
+    <hr>
+
+    <h1>HTML5 Yerel Ses Oynatıcı (`<audio>`)</h1>
+    <p>Aşağıda döngüsel oynatma (`loop`) ve standart kontrollerle yapılandırılmış ses örneği yer almaktadır:</p>
+
+    <!-- 
+      audio etiketi nitelikleri:
+      - controls: Oynat, duraklat, ses ayarı ve zaman çubuğunun görünmesini sağlar (olmazsa ses denetlenemez).
+      - loop: Ses bittiğinde başa dönüp tekrar çalmaya devam eder.
+      - autoplay: Sayfa yüklendiğinde otomatik başlatır.
+      - muted: Sesi kapalı olarak başlatır.
+    -->
+    <audio controls loop style="margin-top: 20px;">
+        <!-- 
+          MIME türleri: MP3 için audio/mpeg, OGG için audio/ogg, WAV için audio/wav kullanılır.
+        -->
+        <source src="muzik-dosyasi.mp3" type="audio/mpeg">
+        <source src="muzik-dosyasi.ogg" type="audio/ogg">
+
+        Tarayıcınız HTML5 ses etiketini desteklememektedir.
+    </audio>
+</body>
+</html>

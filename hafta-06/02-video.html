@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 06 - HTML5 Video Ekleme</title>
+</head>
+<body style="text-align: center; font-family: sans-serif; margin-top: 30px;">
+    <nav>
+        <a href="01-tables.html">← Önceki: Tablolar</a> | 
+        <a href="https://github.com/Meglore/web-tasarimi-ders-notlari/blob/main/hafta-06/README.md">Hafta 06 Menü</a> | 
+        <a href="03-audio.html">Sonraki: Ses Ekleme →</a>
+    </nav>
+    <hr>
+
+    <h1>HTML5 Yerel Video Oynatıcı (`<video>`)</h1>
+    <p>Aşağıda yerel kontroller ve kapak görseli (`poster`) ile yapılandırılmış video örneği yer almaktadır:</p>
+
+    <!-- 
+      video etiketi nitelikleri:
+      - controls: Tarayıcının yerel oynat, duraklat, ses ve tam ekran butonlarını gösterir.
+      - width: Piksel cinsinden genişlik tanımlar.
+      - poster: Video başlatılmadan önce ekranda duracak afiş görselidir.
+      - autoplay: Sayfa açıldığında otomatik başlatır (Sesli videolarda muted olmadan tarayıcı engeller).
+      - muted: Başlangıçta videonun sesini kapatır.
+      - loop: Video bitince otomatik olarak başa sarar.
+    -->
+    <video width="640" controls poster="kapak-resmi.jpg" style="box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px;">
+        <!-- 
+          source etiketi: Farklı formatlardaki video kaynaklarını öncelik sırasıyla tarayıcıya sunar.
+        -->
+        <source src="ornek-video.mp4" type="video/mp4">
+        <source src="ornek-video.webm" type="video/webm">
+
+        <!-- Tarayıcı video etiketini desteklemiyorsa bu metin gösterilir -->
+        Tarayıcınız HTML5 video etiketini desteklememektedir.
+    </video>
+</body>
+</html>

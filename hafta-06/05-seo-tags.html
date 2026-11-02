@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafta 06 - HTML5 Blok, Inline ve Semantik Düzen</title>
+  </head>
+  <body
+    style="
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f8fafc;
+      padding: 20px;
+    "
+  >
+    <nav style="margin-bottom: 15px">
+      <a href="04-forms.html">← Önceki: Formlar</a> |
+      <a
+        href="https://github.com/Meglore/web-tasarimi-ders-notlari/blob/main/hafta-06/README.md"
+        >Hafta 06 Ana Menü</a
+      >
+    </nav>
+    <hr style="margin-bottom: 20px" />
+
+    <!-- 
+      =========================================================
+      <div> ETİKETİ:
+      - Genel amaçlı, anlamsız (non-semantic) bir kapsayıcıdır.
+      - BLOK SEVİYELİDİR: %100 satır genişliğini kaplar.
+      =========================================================
+    -->
+    <div
+      class="site-kapsayici"
+      style="
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        margin: 0 auto;
+      "
+    >
+      <!-- 
+          =========================================================
+          <header> ETİKETİ:
+          - Sayfanın üst alanıdır (Logo, başlık, karşılama metni).
+          - Blok seviyelidir.
+          =========================================================
+        -->
+      <header
+        style="
+          background-color: #e0f2fe;
+          padding: 20px;
+          border-radius: 6px;
+          margin-bottom: 15px;
+        "
+      >
+        <!-- 
+              <span> ETİKETİ:
+              - SATIR İÇİ (Inline) bir etikettir. Yalnızca içeriği kadar yer tutar.
+            -->
+        <h1 style="margin-top: 0; color: #0369a1">
+          Web Tasarımı Portalı
+          <span
+            style="
+              background-color: #fce7f3;
+              color: #be185d;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-size: 14px;
+            "
+            >Inline Vurgu</span
+          >
+        </h1>
+
+        <!-- 
+              <nav> ETİKETİ:
+              - Birincil navigasyon menüsünü barındıran semantik bloktur.
+            -->
+        <nav
+          style="
+            background-color: #d1fae5;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+          "
+        >
+          <a href="#" style="color: #065f46; text-decoration: none">Anasayfa</a>
+          |
+          <a href="#" style="color: #065f46; text-decoration: none"
+            >Ders Notları</a
+          >
+          |
+          <a href="#" style="color: #065f46; text-decoration: none">İletişim</a>
+        </nav>
+      </header>
+
+      <!-- 
+          =========================================================
+          <main> ETİKETİ:
+          - Sayfanın birincil ve özgün içeriğini kapsar. Her sayfada 1 adet olmalıdır.
+          - Blok seviyelidir.
+          =========================================================
+        -->
+      <main style="display: flex; gap: 15px; margin-bottom: 15px">
+        <!-- 
+              <section> ETİKETİ:
+              - Sayfayı tematik alt bölümlere ayıran semantik bloktur.
+            -->
+        <section
+          style="
+            flex: 3;
+            background-color: #fef3c7;
+            padding: 15px;
+            border-radius: 6px;
+          "
+        >
+          <h2 style="margin-top: 0; color: #92400e">
+            Ders İçerikleri ve Makaleler
+          </h2>
+
+          <!-- 
+                  <article> ETİKETİ:
+                  - Kendi başına bağımsız anlam ifade eden yazılar/haberler için kullanılır.
+                -->
+          <article
+            style="
+              background-color: #ffffff;
+              padding: 12px;
+              border-radius: 4px;
+              margin-bottom: 10px;
+              border: 1px solid #fde68a;
+            "
+          >
+            <h3 style="margin-top: 0">HTML5 Semantik Ağ Mimarisi</h3>
+            <p style="margin-bottom: 0; color: #475569">
+              Semantik etiketler, arama motorlarının web sayfasının omurgasını
+              doğru indekslemesini sağlar...
+            </p>
+          </article>
+
+          <article
+            style="
+              background-color: #ffffff;
+              padding: 12px;
+              border-radius: 4px;
+              border: 1px solid #fde68a;
+            "
+          >
+            <h3 style="margin-top: 0">CSS Mizanpajına Giriş</h3>
+            <p style="margin-bottom: 0; color: #475569">
+              Gelecek hafta başlayacağımız CSS derslerinde kutu modeli ve
+              Flexbox ele alınacaktır...
+            </p>
+          </article>
+        </section>
+
+        <!-- 
+              <aside> ETİKETİ:
+              - Kenar çubuğu (Sidebar), duyurular veya yan içerik için ayrılmış bloktur.
+            -->
+        <aside
+          style="
+            flex: 1;
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+          "
+        >
+          <h4 style="margin-top: 0; color: #334155">Hızlı Bağlantılar</h4>
+          <ul style="padding-left: 20px; margin-bottom: 0; color: #64748b">
+            <li>OBS Sistemi</li>
+            <li>Akademik Takvim</li>
+            <li>DevTools Kılavuzu</li>
+          </ul>
+        </aside>
+      </main>
+
+      <!-- 
+          =========================================================
+          <footer> ETİKETİ:
+          - Sayfanın en alt bilgi bloğudur (Telif, lisans vb.).
+          - Blok seviyelidir.
+          =========================================================
+        -->
+      <footer
+        style="
+          background-color: #334155;
+          color: #ffffff;
+          padding: 15px;
+          border-radius: 6px;
+          text-align: center;
+        "
+      >
+        <p style="margin: 0; font-size: 13px">
+          &copy; 2026 Atatürk Üniversitesi - Yönetim Bilişim Sistemleri Bölümü
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
