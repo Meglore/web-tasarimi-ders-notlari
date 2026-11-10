@@ -24,6 +24,7 @@ Bu depo; **Mustafa Kemal YAZLIK** tarafından **Yönetim Bilişim Sistemleri (YB
 | **04** | `HTML Temelleri, Etiket Mantığı & DevTools` | XML veri mimarisi, HTML5 iskeleti, DevTools analizi, tipografi, bağlantılar & listeler | [İncele](./hafta-04/) |
 | **05** | `Ders İşlenmedi / Mazeret`                  | Öğretim elemanı mazereti / akademik takvim sebebiyle ders işlenmedi                    | [İncele](./hafta-05/) |
 | **06** | `Tablolar, Multimedya, Formlar & Semantik`  | Tablo mimarisi (`rowspan`/`colspan`), video/audio, formlar, HTTP POST analizi, düzen   | [İncele](./hafta-06/) |
+| **07** | `CSS’e Giriş & Görsel Biçimlendirme`       | CSS ekleme yöntemleri, seçiciler ve öncelik, arka plan, kenarlık, metin ve kutu boşlukları | [İncele](./hafta-07/) |
 
 ---
 

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hafta 07 · Tamamlayıcı CSS Laboratuvarı</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f1f5f9;
+        color: #172033;
+        font: 1rem / 1.6 system-ui, sans-serif;
+      }
+
+      main {
+        max-width: 58rem;
+        margin-inline: auto;
+        padding: 1rem;
+      }
+
+      section {
+        margin-block: 1rem;
+        padding: 1rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.75rem;
+        background-color: white;
+      }
+
+      h2 {
+        margin-block-start: 0;
+      }
+
+      /* 01 · Boşluk: arada kaç seviye olursa olsun içteki p'yi seçer. */
+      .duyuru p {
+        color: #334155;
+      }
+
+      /* > işareti: yalnız duyurunun doğrudan çocuğu olan p'yi seçer. */
+      .duyuru > p {
+        font-weight: bold;
+      }
+
+      /* Boşluksuz iki sınıf: iki sınıfın da aynı öğede olmasını ister.
+         Bu seçici .duyuru p'den daha özgüldür ve bu örnekte rengi belirler. */
+      .etiket.acil {
+        color: #991b1b;
+      }
+
+      /* 02 · Her iki kutuda width, padding ve border aynı.
+         Content-box: 200 + 2 × 30 + 2 × 2 = 264 px.
+         Border-box: 200 px toplam; içeriğe 136 px kalır.
+         Margin, iki hesapta da kutunun dışındadır. */
+      .kutu {
+        width: 200px;
+        padding: 12px 30px;
+        border: 2px solid #1d4ed8;
+        margin-block: 0.5rem;
+        background-color: #dbeafe;
+        overflow-wrap: anywhere;
+      }
+
+      .icerik-kutusu {
+        box-sizing: content-box;
+      }
+
+      .kenarlik-kutusu {
+        box-sizing: border-box;
+      }
+
+      /* Kutu deneyini dar ekranda da incelemek için yatay kaydırmaya izin ver. */
+      .olcum-alani {
+        overflow-x: auto;
+      }
+
+      /* 03 · % burada kapsayıcının içerik genişliğine bağlıdır.
+         rem kök yazı boyutuna bağlıdır; 1rem her ortamda 16px değildir.
+         auto yan boşluklar, yer kaldığında kutuyu ortalar. */
+      .esnek-kutu {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 22rem;
+        margin-inline: auto;
+        padding: 1rem;
+        border: 1px solid #0f766e;
+        border-radius: 0.5rem;
+        background-color: #ccfbf1;
+      }
+
+      /* 04 · :hover işaretçinin konumunu, :focus-visible görünür odak
+         gerektiren etkileşimi seçer. Tab ile bağlantıya gelerek dene.
+         Outline yer kaplamaz, bu yüzden odakta kutunun ölçüsü değişmez. */
+      .deneme-baglantisi {
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.4rem;
+        background-color: #1e40af;
+        color: white;
+      }
+
+      .deneme-baglantisi:hover {
+        background-color: #1e3a8a;
+      }
+
+      .deneme-baglantisi:focus-visible {
+        outline: 3px solid #9a3412;
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="baslangic">
+      <header>
+        <p>HAFTA 07 · EK UYGULAMA</p>
+        <h1>Tamamlayıcı CSS Laboratuvarı</h1>
+        <p><strong>Bu bölümdeki ek konular derste işlenmedi.</strong> 7. haftada
+          öğrendiğin CSS konularını pekiştirmek ve sonraki uygulamalarda işine
+          yarayacak ayrıntıları görmek için hazırlandı.</p>
+        <p>Dosyayı editörde açarak CSS yorumlarını oku, tarayıcıda sonucu karşılaştır.</p>
+      </header>
+
+      <section>
+        <h2>01 · Birleşik seçiciler ve özgüllük</h2>
+        <div class="duyuru">
+          <p class="etiket acil">Doğrudan çocuk ve iki sınıf: kalın ve kırmızı.</p>
+          <div>
+            <p>İç içe paragraf: yalnızca genel renk kuralı uygulanır.</p>
+          </div>
+        </div>
+        <p><strong>Dene.</strong> DevTools’ta ilk paragrafı seç. <em>Styles</em>
+          panelinde üzeri çizili <code>color</code> bildirimini bul. Sonra
+          paragraftan <code>acil</code> sınıfını kaldırıp rengi karşılaştır.</p>
+      </section>
+
+      <section>
+        <h2>02 · Kutu genişliğini hesaplamak</h2>
+        <div class="olcum-alani">
+          <div class="kutu icerik-kutusu"><code>content-box</code> · 264 px</div>
+          <div class="kutu kenarlik-kutusu"><code>border-box</code> · 200 px</div>
+        </div>
+        <p><strong>Dene.</strong> DevTools’un kutu modeli görünümünde içerik ve
+          kenarlık ölçülerini karşılaştır. İki kutuda da yatay iç boşluk 30 px,
+          kenarlık 2 px ve bildirilen <code>width</code> değeri 200 px.</p>
+      </section>
+
+      <section>
+        <h2>03 · Esnek ölçüler ve azami genişlik</h2>
+        <div class="esnek-kutu">
+          Bu kutu dar alanda küçülür, geniş alanda 22 rem’de durur.
+        </div>
+        <p><strong>Dene.</strong> Tarayıcıyı daralt. <code>max-width</code>
+          bildirimini geçici olarak kapat ve geniş ekrandaki sonucu karşılaştır.</p>
+      </section>
+
+      <section>
+        <h2>04 · Fare ve klavye durumları</h2>
+        <p><strong>Dene.</strong> Fareyi bağlantının üzerine getir ve arka plan
+          rengini gözle. Ardından Tab tuşuyla bağlantıya gel ve odak çizgisini gör.</p>
+        <a class="deneme-baglantisi" href="#baslangic">Sayfanın başına dön</a>
+      </section>
+    </main>
+  </body>
+</html>

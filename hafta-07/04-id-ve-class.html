@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hafta 07 · Etiket, ID ve Class Seçicileri</title>
+    <style>
+      #haber {
+        color: white;
+        background-color: forestgreen;
+      }
+
+      p {
+        color: navy;
+        background-color: aliceblue;
+      }
+
+      p {
+        background-color: gainsboro;
+      }
+
+      .arka-plan {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Etiket, ID ve sınıf seçicileri</h1>
+      <p>Bu paragrafın arka planı ikinci p kuralından gelir.</p>
+      <p id="haber" class="arka-plan">
+        Haber alanının arka planı ID’den, kalın yazısı sınıftan gelir.
+      </p>
+      <p class="arka-plan">Bu paragraf ortak arka plan sınıfını kullanır.</p>
+      <div class="arka-plan">Aynı sınıf bir div öğesine de uygulanabilir.</div>
+    </main>
+  </body>
+</html>

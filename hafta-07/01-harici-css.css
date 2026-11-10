@@ -1,0 +1,5 @@
+/* p seçicisi sayfadaki iki paragrafla da eşleşir. */
+p {
+  background-color: aqua;
+  color: orangered;
+}

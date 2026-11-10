@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hafta 07 · CSS Bildirim Önceliği</title>
+    <style>
+      .normal {
+        color: blue;
+      }
+
+      .oncelikli {
+        color: blue !important;
+      }
+
+      #haber {
+        color: white !important;
+        background-color: forestgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Normal bildirim ve !important</h1>
+      <p class="normal" style="color: darkgoldenrod">
+        İlk paragrafın rengini satır içindeki normal bildirim belirler.
+      </p>
+      <p class="oncelikli" style="color: darkgoldenrod">
+        İkinci paragrafın rengini !important işaretli bildirim belirler.
+      </p>
+      <p id="haber" class="oncelikli" style="color: darkgoldenrod">
+        Üçüncü paragrafta iki bildirim de !important. Rengi ID kuralı belirler.
+      </p>
+    </main>
+  </body>
+</html>

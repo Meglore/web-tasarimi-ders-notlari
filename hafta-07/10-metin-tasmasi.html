@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hafta 07 · Metin Taşması</title>
+    <style>
+      .kutu {
+        max-width: 20ch;
+        height: 4rem;
+        padding: 8px;
+        border: 2px solid #475569;
+      }
+
+      .kaydir {
+        overflow: auto;
+      }
+
+      .gizle {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sabit yükseklikte metin taşması</h1>
+
+      <h2 id="kaydir-baslik">Taşınca kaydırılabilir alan</h2>
+      <p class="kutu kaydir" tabindex="0" aria-labelledby="kaydir-baslik">
+        Kutu sabit yükseklikteyken uzun bir metin kutuya sığmayabilir. Bu örnekte
+        kutuyu aşağı doğru kaydırıp metnin devamını okuyabilirsin.
+      </p>
+
+      <h2>Taşan kısmı gizleme</h2>
+      <p class="kutu gizle">
+        Kutu sabit yükseklikteyken uzun bir metin kutuya sığmayabilir. Bu örnekte
+        kutunun sınırını aşan satırlar ekranda gösterilmez.
+      </p>
+    </main>
+  </body>
+</html>

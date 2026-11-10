@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hafta 07 · Metin Biçimlendirme</title>
+    <style>
+      .kutu {
+        max-width: 500px;
+        border: 2px solid #64748b;
+        padding: 12px;
+      }
+
+      .ortali {
+        text-align: center;
+      }
+
+      .saga-hizali {
+        text-align: right;
+      }
+
+      .yazi {
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        text-indent: 30px;
+      }
+
+      .alti-cizili {
+        text-decoration: underline;
+      }
+
+      .ustu-cizili {
+        text-decoration: overline;
+      }
+
+      .uzeri-cizili {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Metni kutunun içinde biçimlendirmek</h1>
+
+      <div class="kutu">
+        <p class="ortali">Kutuya göre ortalanmış metin</p>
+        <p class="saga-hizali">Kutuya göre sağa hizalanmış metin</p>
+        <p class="yazi">
+          Bu paragrafın ilk satırı 30 piksel içeriden başlar. Metin birden fazla satıra
+          yayıldığında sonraki satırlar kutunun normal metin hizasına döner.
+        </p>
+        <ul>
+          <li class="alti-cizili">Alt çizgi</li>
+          <li class="ustu-cizili">Üst çizgi</li>
+          <li class="uzeri-cizili">Üzeri çizili</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
